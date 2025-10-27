@@ -1,0 +1,1 @@
+A web based chat application is an interactive,real time communication platform that enables users to exchange messages instantly through a web browser facilitating a seamless communication among multiple users.
