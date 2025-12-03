@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 HiFi Waves – Java Web Chat Application
 1. Overview
 HiFi Waves is a web-based chat application that allows users to:
@@ -96,6 +97,18 @@ Request Flow Example
 4.	Servlet fetches all messages → Displays updated chat
 ________________________________________
 7. Project Structure
+=======
+# HiFi Waves – Web Chat
+
+## Overview
+HiFi Waves is a web application that allows users to **register, login, and manage orders**.  
+The project uses **Java Servlets, JSP, and JDBC** for backend operations with a **MySQL database**.
+
+---
+
+## Project Structure
+
+>>>>>>> 12795ffb2abf94f6bc5baffb7aaec6f20ec1aca1
 hifi-waves/
 ├─ backend/java/
 │  ├─ DBConnection.java
