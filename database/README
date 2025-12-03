@@ -1,0 +1,18 @@
+This creates:
+- `users` table (for login system)
+- `messages` table (for storing chat messages)
+
+---
+
+## Application Flow (How It Works)
+
+1. **User registers** using username, email, and password  
+2. Password is hashed using SHA-256  
+3. User logs in → Servlet verifies credentials  
+4. Session is created for logged-in user  
+5. User is redirected to chat page  
+6. User sends messages → Stored in DB  
+7. Chat page displays all messages from database  
+8. User can logout anytime → Session ends  
+
+This ensures a clear demonstration of Servlet-based session management and request handling.
