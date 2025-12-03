@@ -63,9 +63,3 @@ hifi-waves/
 4. **Run Application**
    - Start Tomcat server.
    - Open browser and navigate to `http://localhost:8080/YourAppName/login.jsp`.
-
----
-
-
-## Author
-Pushkar Singh
