@@ -1,64 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ page import="java.sql.ResultSet" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="true" %>
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Orders - HiFi Waves</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f0f2f5; }
-        .container { width: 800px; margin: 50px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h2 { text-align: center; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        table, th, td { border: 1px solid #ccc; }
-        th, td { padding: 10px; text-align: center; }
-        input, button { padding: 8px; margin: 5px; border-radius: 4px; }
-        button { background: #007bff; color: white; border: none; cursor: pointer; }
-        button:hover { background: #0056b3; }
-        .error { color: red; text-align: center; }
-    </style>
-</head>
+<head><title>Order Page</title></head>
 <body>
-    <div class="container">
-        <h2>Welcome, <%= session.getAttribute("username") %></h2>
 
-        <h3>Add New Order</h3>
-        <form action="orders" method="post">
-            <input type="hidden" name="userId" value="1"> <!-- Replace with real user ID -->
-            <input type="text" name="productName" placeholder="Product Name" required>
-            <input type="number" name="quantity" placeholder="Quantity" required>
-            <button type="submit">Add Order</button>
-        </form>
+<h2>Place Your Order</h2>
 
-        <div class="error">
-            <% if(request.getAttribute("errorMessage") != null) { %>
-                <%= request.getAttribute("errorMessage") %>
-            <% } %>
-        </div>
+<p>Welcome, ${sessionScope.username}</p>
 
-        <h3>Your Orders</h3>
-        <table>
-            <tr>
-                <th>Order ID</th>
-                <th>Product Name</th>
-                <th>Quantity</th>
-            </tr>
-            <%
-                ResultSet rs = (ResultSet) request.getAttribute("orders");
-                if (rs != null) {
-                    while(rs.next()) {
-            %>
-            <tr>
-                <td><%= rs.getInt("id") %></td>
-                <td><%= rs.getString("product_name") %></td>
-                <td><%= rs.getInt("quantity") %></td>
-            </tr>
-            <%
-                    }
-                }
-            %>
-        </table>
-    </div>
+<c:if test="${not empty error}">
+    <p style="color:red;">${error}</p>
+</c:if>
+
+<form action="OrderServlet" method="post">
+    Product: <input type="text" name="product" required><br><br>
+    Amount: <input type="number" name="amount" required><br><br>
+    <button type="submit">Place Order</button>
+</form>
+
 </body>
 </html>
