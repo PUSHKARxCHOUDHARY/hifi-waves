@@ -12,7 +12,7 @@ This project emphasizes:
 
 ---
 
-## 📖 Project Overview
+## Project Overview
 
 The main objective of Hifi Waves is to provide a simple, interactive chat room where multiple users can communicate by sending and receiving messages.  
 Every message is stored in a MySQL database and displayed in chronological order.
@@ -21,7 +21,7 @@ The project is deliberately kept light, clean, and easy to understand so it perf
 
 ---
 
-## 📁 Project Structure (Detailed)
+##  Project Structure (Detailed)
 
 hifi-waves/
 │
@@ -42,7 +42,7 @@ hifi-waves/
 
 ---
 
-## 🎯 Key Features
+##  Key Features
 
 - User registration with validation  
 - Secure login (SHA-256 password hashing)  
@@ -57,7 +57,7 @@ hifi-waves/
 
 ---
 
-## 🛠 Technologies Used
+##  Technologies Used
 
 ### **Backend**
 - Java (JDK 8+)
@@ -78,6 +78,6 @@ hifi-waves/
 
 ---
 
-## 🗄 Database Setup
+##  Database Setup
 
 Run the SQL file from the `/database/` folder:
