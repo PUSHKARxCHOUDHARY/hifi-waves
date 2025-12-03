@@ -1,4 +1,4 @@
-# HiFi Waves – Web Chat & Order Management System
+# HiFi Waves – Web Chat
 
 ## Overview
 HiFi Waves is a web application that allows users to **register, login, and manage orders**.  
