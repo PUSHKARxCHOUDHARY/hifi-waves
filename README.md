@@ -56,16 +56,3 @@ hifi-waves/
    - Place all `.java` files inside `backend/java/` in your project.
    - Compile Java files and deploy to Tomcat.
 
-3. **Frontend Setup**
-   - Place all `.jsp` files inside `webapps/YourAppName/`.
-   - Ensure form actions match servlet mappings (`/login`, `/register`, `/orders`).
-
-4. **Run Application**
-   - Start Tomcat server.
-   - Open browser and navigate to `http://localhost:8080/YourAppName/login.jsp`.
-
----
-
-
-## Author
-Pushkar Singh
