@@ -1,20 +1,19 @@
--- Create database
-CREATE DATABASE IF NOT EXISTS hifi_waves;
+CREATE DATABASE hifi_waves;
 USE hifi_waves;
 
--- Users table
-CREATE TABLE IF NOT EXISTS users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) UNIQUE,
+    password_hash VARCHAR(256),
+    email VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Orders table
-CREATE TABLE IF NOT EXISTS orders (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    product_name VARCHAR(100) NOT NULL,
-    quantity INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+CREATE TABLE messages (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    username VARCHAR(50),
+    text VARCHAR(1000),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
