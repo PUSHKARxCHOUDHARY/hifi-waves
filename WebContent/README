@@ -6,13 +6,13 @@ This is the frontend layer of the application, containing JSP pages, CSS, and we
 
 ##  Folders
 
-### ✔jsp/  
+### jsp/  
 Contains all JSP files used as the user interface:
 - login.jsp  
 - register.jsp  
 - chat.jsp  
 
-### ✔css/  
+### css/  
 Optional folder for stylesheets.
 
 ###  WEB-INF/  
